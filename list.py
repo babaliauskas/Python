@@ -1,7 +1,7 @@
 
 
 # ADD
-# .appernd() - add one item at the end of the list
+# .append() - add one item at the end of the list
 # .extend() - add to the end of a list all values passed to extend([])
 # .insert() - insert an item at a given position. (position, value)
 
