@@ -125,9 +125,8 @@ print('Max Song Title: ', max_song_title)
 
 # return a copy of reverse iterator
 
-for x in reversed(range(0, 10)):
-    print(x)
-
+# for x in reversed(range(0, 10)):
+# print(x)
 
 ############################################
 
@@ -148,3 +147,75 @@ abs(3.222)  # 3.222
 
 # Takes an iterable and an optional start.
 # Returns the sum of start and the items of an iterable from left to right and returns the total
+
+sum([1, 2, 3])  # 6
+sum([1, 2, 3], 10)  # 16  ---------- 10 is the starting number
+
+#########################################
+
+# round
+
+# return number rounded to ndigits precision after the decimal point. If ndigits is omitted or is None, it return the nearest integer to its input
+
+round(10.2)  # 10
+round(1.212121, 2)  # 1.21  ----------- 2 is how many numbers after .
+
+
+######################################
+
+# zip
+
+# Make an iterator that aggregates elements from each of the iterables.
+# Returns an iterator of tuplesm where the i-th tuple contains the i-th element from each of the argument sequences or iterables.
+# The iterator stops when the shortest input iterable is exhausted
+
+zip_nums1 = [1, 2, 3]
+zip_nums2 = [4, 5, 6]
+z = list(zip(zip_nums1, zip_nums2))  # [(1,6), (2,5), (3,4)]
+z2 = dict(zip(zip_nums1, zip_nums2))  # {1: 6, 2: 5, 3: 4}
+
+
+midterms = [80, 91, 78]
+finals = [98, 89, 53]
+students = ['Lukas', 'Mode', 'Siga']
+
+final_grades = {t[0]: max(t[1], t[2]) for t in zip(students, midterms, finals)}
+
+# OR
+
+final_score = dict(
+    zip(
+        students,
+        map(
+            lambda pair: max(pair),
+            zip(midterms, finals)
+        )
+    )
+)
+
+# print('Final Score: ', final_score)
+
+# { 'Lukas': 98, 'Mode': 91, 'Siga': 78}
+
+# print('Final Grades: ', final_grades)
+
+
+##########################################
+
+def max_magnitude(lst):
+    return max(abs(num) for num in lst)
+
+
+# print('Max Magnitude: ', max_magnitude([2, 6, -10]))
+
+######################################
+
+def sum_even_values(*args):
+    return sum(arg for arg in args if arg % 2 == 0)
+
+
+def interleave(str1, str2):
+    return ''.join(''.join(x) for x in (zip(str1, str2)))
+
+
+print('asdasdasdasd: ', interleave('hi', 'ho'))
