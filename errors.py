@@ -3,7 +3,7 @@
 # raise ValueError('invalid value')
 # raise NameError('Invalid name')
 
-##########################
+# \
 
 
 def colorize(text, color):
@@ -82,4 +82,49 @@ def divide(a, b):
 
 
 # divide(1, 2)
-divide(1, 0)
+# divide(1, 0)
+
+######################################
+# import pdb
+first = 'First'
+second = 'Second'
+# pdb.set_trace()
+result = first + second
+third = 'Third'
+result += third
+print(result)
+
+#############################################
+
+
+def add_numbers(a, b, c):
+    # import pdb; pdb.set_trace()
+    return a + b + c
+
+
+# add_numbers(1, 2, 3)
+
+# Commonly on one line:
+#import pdb; pdb.set_trace()
+
+# Common PDB Commands:
+# l (list)
+# n (next line)
+# p (print)
+# c (continue - finishes debugging)
+
+
+##############################
+
+def divide2(num1, num2):
+    try:
+        result = num1 / num2
+    except TypeError:
+        print('Please provide two integers or floats')
+    except ZeroDivisionError:
+        print('Please do not didvide by zero')
+    else:
+        print(result)
+
+
+divide2(4, 2)
