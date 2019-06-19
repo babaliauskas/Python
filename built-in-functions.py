@@ -213,9 +213,16 @@ def max_magnitude(lst):
 def sum_even_values(*args):
     return sum(arg for arg in args if arg % 2 == 0)
 
+#######################################
+
 
 def interleave(str1, str2):
     return ''.join(''.join(x) for x in (zip(str1, str2)))
 
+######################################
 
-print('asdasdasdasd: ', interleave('hi', 'ho'))
+
+def extract_full_name(l):
+    return list(map(lambda val: "{} {}".format(val['first'], val['last']), l))
+
+#######################################
