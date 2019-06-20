@@ -120,11 +120,11 @@ def divide2(num1, num2):
     try:
         result = num1 / num2
     except TypeError:
-        print('Please provide two integers or floats')
+        return 'Please provide two integers or floats'
     except ZeroDivisionError:
-        print('Please do not didvide by zero')
+        return 'Please do not divide by zero'
     else:
-        print(result)
+        return result
 
 
 divide2(4, 2)
