@@ -32,4 +32,4 @@ class User:
 user1 = User('Joe', 'Smith', 45)
 user2 = User('Blanca', 'Lopez', 34)
 
-print(User.display_active_users())
+# print(User.display_active_users())

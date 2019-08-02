@@ -1,5 +1,4 @@
 # def name_of_function ():
-  
 
 
 # def sing_happy_birthday(name):
@@ -14,9 +13,9 @@
 # sing_happy_birthday('siga')
 
 
-
 # def square_of_7():
-#   return 7**2
+#     return 'labas'
+
 
 # result = square_of_7()
 # print(result)
@@ -33,13 +32,10 @@
 # print(flip_coin())
 
 
-
 # def exponent(num, power=2):
 #   return num ** power
 # print(exponent(3,4)) # 81
 # print(exponent(2)) # 4
-
-
 
 
 # def add(a,b):
