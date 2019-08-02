@@ -65,9 +65,3 @@ card2 = d.deal_card()
 print(card2)
 print(hand)
 card3 = d.deal_card()
-
-# c = Card('A', 'Hearts')
-# c2 = Card('10', 'Diamonds')
-# c3 = Card('K', 'Spades')
-
-# print(c, c2, c3)
