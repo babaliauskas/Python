@@ -16,6 +16,10 @@ class User:
         self.age = age
         User.active_users += 1
 
+    def logout(self):
+        User.active_users -= 1
+        return f"{self.first} has logged out"
+
     def full_name(self):
         return f'{self.first} {self.last}'
 
@@ -28,8 +32,32 @@ class User:
     def is_senior(self):
         return self.age >= 65
 
+    def birthday(self):
+        self.age += 1
+        return f"Happy {self.age}th, {self.first}"
 
-user1 = User('Joe', 'Smith', 45)
-user2 = User('Blanca', 'Lopez', 34)
 
-# print(User.display_active_users())
+class Moderator(User):
+    total_mods = 0
+
+    def __init__(self, first, last, age, community):
+        super().__init__(first, last, age)
+        self.community = community
+        Moderator.total_mods += 1
+
+    @classmethod
+    def display_active_mods(cls):
+        return f"There are currrently {cls.total_mods} active mods"
+
+    def remove_post(self):
+        return f"{self.full_name()} removed a post from the {self.community} community"
+
+
+bla = User('Bla', 'Bloo', 23)
+bla2 = User('Bla', 'Bloo', 23)
+bla3 = User('Bla', 'Bloo', 23)
+lukas = Moderator('Lukas', 'Babaliauskas', 30, 'Coding')
+lukas3 = Moderator('Lukas', 'Babaliauskas', 30, 'Coding')
+lukas5 = Moderator('Lukas', 'Babaliauskas', 30, 'Coding')
+print(User.display_active_users())
+print(Moderator.display_active_mods())
