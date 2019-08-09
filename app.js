@@ -1,26 +1,3 @@
-// const coins = 0
-// const numOfCoins = (cents) => {
-//   const remaining = 0
-//   const quaters = 0
-//   const tens = 0
-//   const fives = 0
-//   const ones = 0
-//   if (cents > 24) {
-//     quaters = cents % 25
-//     coins = Math.floor(cents / 25)
-//   }
-
-//   if (quaters > 9) {
-//     tens = quatersModule % 10
-//     coins += Math.floor(quatersModule / 10)
-//   }  
-
-//   if (dimeModule > 4) {
-//     const fiveModule = dimeModule % 5
-//     coins += Math.floor(fiveModule / 5)
-//   }
-// }
-
 let answer = 0
 
 const nums = cents => {
