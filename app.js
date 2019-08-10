@@ -45,5 +45,3 @@ const quatersFunc = cents => {
   answer += Math.floor(cents / 25)
   return quaters
 }
-
-console.log(nums(0))
