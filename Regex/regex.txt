@@ -26,4 +26,4 @@ Anchors and Boundaries
 
 ^  -- Start of string or line
 $  -- End of string or line
-\b Word boundary
+\b -- Word boundary
